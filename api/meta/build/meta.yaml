@@ -7,30 +7,22 @@ security:
   - SubscriberAuth: []
 paths:
   /get_cancellation_reasons:
-    post:
-      tags:
-        - Beckn Provider Platform (BPP)
-      description: BAP fetches the list of cancellation reasons from BPP
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                context:
-                  allOf:
-                    - $ref: "#/components/schemas/Context"
-                    - properties:
-                        action:
-                          enum:
-                            - get_cancellation_reasons
-                      required:
-                        - action
-              required:
-                - context
-      responses:
-        default:
-          $ref: "#/paths/~1return_reasons/post/responses/default"
+    application/json:
+      schema:
+        type: object
+        properties:
+          context:
+            allOf:
+              - $ref: "#/components/schemas/Context"
+              - properties:
+                  action:
+                    enum:
+                      - get_cancellation_reasons
+                required:
+                  - action
+        required:
+          - context
+
   /cancellation_reasons:
     post:
       tags:
