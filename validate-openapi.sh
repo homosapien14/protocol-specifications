@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-FILES=("api/meta/meta.yaml" "api/registry/registry.yaml" "api/transaction/transaction.yaml")
+FILES=("api/meta/build/meta.yaml" "api/registry/build/registry.yaml" "api/transaction/build/transaction.yaml")
 
 for FILE in "${FILES[@]}"; do
     if [ -f "$FILE" ]; then
