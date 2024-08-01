@@ -10,9 +10,9 @@ on:
   pull_request:
     branches: [ "master" ]
     paths:
-      - "api/meta/meta.yaml"
-      - "api/registry/registry.yaml"
-      - "api/transaction/transaction.yaml"
+      - "./api/meta/meta.yaml"
+      - "./api/registry/registry.yaml"
+      - "./api/transaction/transaction.yaml"
 
 jobs:
    validate:
