@@ -5,7 +5,7 @@ FILES=("./api/meta/build/meta.yaml" "./api/registry/build/registry.yaml" "./api/
 
 for FILE in "${FILES[@]}"; do
     if [ -f "$FILE" ]; then
-        openapi validate "$FILE"
+        openapi lint "$FILE" 
         echo "$FILE is valid"
     else
         echo "$FILE does not exist"
