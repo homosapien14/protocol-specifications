@@ -23,3 +23,4 @@ if [ $ERRORS -ne 0 ]; then
     echo "There were linting errors. Please fix them before merging."
     exit 1
 fi
+
